@@ -1,2 +1,46 @@
-@import './common';
-@import './example';
+@import '~node_modules/modern-normalize/modern-normalize.css';
+@import '/src/sass/normalize.scss';
+@import '/src/sass/loader.scss';
+
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Century Gothic';
+}
+img {
+  background-color: rgb(180, 180, 180);
+  width: 2000px;
+}
+
+.cat-info {
+  display: flex;
+}
+
+.cat-text {
+  font-size: 32px;
+  padding: 0 60px;
+}
+
+.cat-desc {
+  padding: 24px 0;
+}
+
+.breed-select {
+  font-size: 32px;
+  padding: 10px;
+  display: block;
+  margin: 50px auto;
+  border-radius: 10px;
+}
