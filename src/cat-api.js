@@ -5,7 +5,6 @@ const BASE_URL = 'https://api.thecatapi.com/v1';
 function fetchBreeds() {
   return fetch(`${BASE_URL}/breeds`).then(result =>
     result.json().then(data => {
-      // console.log(data);
       return data;
     })
   );
