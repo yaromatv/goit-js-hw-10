@@ -15,7 +15,6 @@ function renderBreeds() {
 
   fetchBreeds()
     .then(data => {
-      // console.log(data);
       selectEl.classList.remove('is-hidden');
       loaderEl.classList.add('is-hidden');
 
@@ -26,12 +25,9 @@ function renderBreeds() {
         .join('');
 
       selectEl.insertAdjacentHTML('afterbegin', markup);
-
-      // console.log(markup);
     })
     .catch(error => {
       loaderEl.classList.add('is-hidden');
-      // selectEl.classList.add('is-hidden');
       onError();
     });
 }
@@ -59,5 +55,4 @@ function onError() {
 function renderCat(catInfo) {
   catInfoEl.innerHTML = `<div><img class="pic" src="${catInfo.pic}"/></div>
       <div class='cat-text'><h1>${catInfo.name}</h1><p class='cat-desc'>${catInfo.desc}</p><p><strong>Temperament: </strong>${catInfo.temper}</p></div>`;
-  console.log(catInfoEl);
 }

@@ -3,10 +3,11 @@ const API_KEY =
 const BASE_URL = 'https://api.thecatapi.com/v1';
 
 function fetchBreeds() {
-  return fetch(`${BASE_URL}/breeds`).then(result =>
-    result.json().then(data => {
-      return data;
-    })
+  return fetch(`${BASE_URL}/breeds`, { 'x-api-key': `${API_KEY}` }).then(
+    result =>
+      result.json().then(data => {
+        return data;
+      })
   );
 }
 
