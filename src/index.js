@@ -24,7 +24,7 @@ function renderBreeds() {
         })
         .join('');
 
-      selectEl.insertAdjacentHTML('afterbegin', markup);
+      selectEl.insertAdjacentHTML('beforeend', markup);
     })
     .catch(error => {
       loaderEl.classList.add('is-hidden');
