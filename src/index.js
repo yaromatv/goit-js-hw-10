@@ -43,6 +43,7 @@ function onSelect(e) {
       catInfoEl.classList.remove('is-hidden');
     })
     .catch(error => {
+      console.log(error);
       onError();
       loaderEl.classList.add('is-hidden');
     });
