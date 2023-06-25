@@ -50,6 +50,7 @@ function onSelect(e) {
 }
 
 function onError() {
+  catInfoEl.innerHTML = '';
   Report.failure('Kitties do not answer =(', '', 'OK');
 }
 
