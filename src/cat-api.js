@@ -19,13 +19,15 @@ function fetchCatByBreed(id) {
       // GET PIC
       const dataName = data[0].breeds[0];
 
-      return (catInfo = {
+      const catInfo = {
         pic: data[0].url,
         name: dataName.name,
         desc: dataName.description,
         temper: dataName.temperament,
         id: dataName.id,
-      });
+      };
+
+      return catInfo;
     })
   );
 }
